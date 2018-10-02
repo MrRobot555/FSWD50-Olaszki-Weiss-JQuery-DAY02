@@ -1,0 +1,52 @@
+var test = 2;
+var objGrocery = {
+	"Items": [{
+		"ID": 1,
+		"status": 15,
+		"name": "bananas",
+		"img": "img/bananas.jpg",
+		"price": 2.40,
+	}, {
+		"ID": 2,
+		"status": 30,
+		"name": "blueberries",
+		"img": "img/blueberries.jpg",
+		"price": 3.49,
+	}, {
+		"ID": 3,
+		"status": 10,
+		"name": "figs",
+		"img": "img/figs.jpg",
+		"price": 1.99,
+	}, {
+		"ID": 4,
+		"status": 15,
+		"name": "pears",
+		"img": "img/pears.jpg",
+		"price": 1.99,
+	}, {
+		"ID": 5,
+		"status": 15,
+		"name": "limes",
+		"img": "img/lime.jpg",
+		"price": 1.35,
+	}, {
+		"ID": 6,
+		"status": 20,
+		"name": "oranges",
+		"img": "img/orange.jpg",
+		"price": 3.49,
+	}, {
+		"ID": 7,
+		"status": 20,
+		"name": "plums",
+		"img": "img/plums.jpg",
+		"price": 1.25,
+	}, {
+		"ID": 8,
+		"status": 30,
+		"name": "strawberries",
+		"img": "img/strawberries.jpg",
+		"price": 3.69,
+	}]
+}

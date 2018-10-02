@@ -1,0 +1,84 @@
+body {
+  min-width: 800px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center; }
+
+header {
+  background: #2d7784;
+  border-radius: 30px 30px 0 0;
+  font: bold 42px "Trebuchet MS", Arial, Sans-serif;
+  letter-spacing: -2px;
+  color: #FFF;
+  padding: 20px; }
+  header h1 {
+    margin: 0; }
+  header .black {
+    color: #000; }
+
+main {
+  background: lightgrey;
+  display: flex;
+  overflow: auto;
+  max-height: 800px; }
+  main #shop {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+    main #shop > div {
+      position: relative;
+      padding: 5px;
+      width: 200px; }
+      main #shop > div img {
+        width: 100%;
+        height: 100%; }
+    main #shop .item_name {
+      position: absolute;
+      top: 10px;
+      font-size: 30px;
+      text-shadow: 0 0 8px black;
+      text-align: center;
+      width: 100%;
+      color: white; }
+    main #shop .item_price {
+      position: absolute;
+      bottom: 10px;
+      font-size: 30px;
+      text-shadow: 0 0 8px black;
+      text-align: left;
+      text-indent: 10px;
+      width: 100%;
+      color: white; }
+  main #cart {
+    width: 450px;
+    margin-top: 20px;
+    font-size: 18px;
+    text-shadow: 0 0 8px black;
+    text-align: center;
+    color: white; }
+
+footer {
+  background: #2d7784;
+  border-radius: 0 0 30px 30px;
+  color: #FFF; }
+  footer h1 {
+    margin: 0; }
+  footer .black {
+    color: #000; }
+
+@media only screen and (max-width: 600px) {
+  main #shop {
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 70%; }
+  main #cart {
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%; } }
+
+/*# sourceMappingURL=styles.css.map */
