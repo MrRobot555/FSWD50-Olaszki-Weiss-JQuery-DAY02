@@ -24,12 +24,13 @@ $( function() {
 //-----function to change the colors when the cards are dropping-----//
 function changecard(x) {
 	x = x.substr(4,2);
-	$(".card"+x).addClass("dropped"+x);
-	$(".card"+x).removeClass("card"+x);  //cheatprotection
+	$(".card"+x).addClass("dropped"+x).draggable( "disable" ).css("z-index", "1");
+	// disable draggable as cheatprotection
 	$(".drop"+x).addClass("dropped"+x);
 	gamepart();
 }
 
+$("#your_cards div").mousedown(function(){$(this).css("z-index", "3")})
 
 //-----this is to shuffle our array of numbers-----//
 function shuffleArray(d) {
@@ -56,5 +57,4 @@ function gamepart() {
 		time = time.toFixed(2);
 		$("#result").html("<p>Congratulation!<br>You finished the game in "+time+" seconds</p>");
 	}
-	console.log(count);
 }
