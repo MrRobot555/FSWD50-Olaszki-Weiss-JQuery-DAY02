@@ -22,7 +22,8 @@
     #your_cards div p {
       margin: auto;
       font-size: 5vw;
-      color: #fff; }
+      color: #fff;
+      user-select: none; }
   #your_cards .dropped1 {
     background: #0A99FF;
     border: none; }
@@ -75,7 +76,8 @@
     display: flex;
     align-items: center; }
     #place_2_go div p {
-      margin: auto; }
+      margin: auto;
+      user-select: none; }
   #place_2_go .dropped1 {
     background: #0A99FF;
     border: none; }

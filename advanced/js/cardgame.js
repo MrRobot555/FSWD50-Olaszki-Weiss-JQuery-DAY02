@@ -25,6 +25,7 @@ $( function() {
 function changecard(x) {
 	x = x.substr(4,2);
 	$(".card"+x).addClass("dropped"+x);
+	$(".card"+x).removeClass("card"+x);  //cheatprotection
 	$(".drop"+x).addClass("dropped"+x);
 	gamepart();
 }
@@ -42,7 +43,7 @@ function shuffleArray(d) {
 };
 
 //-----time for a game-----//
-var start = Date();
+var start = window.performance.now();
 var end = 0;
 var time = 0;
 var count = 0;
@@ -50,10 +51,10 @@ var count = 0;
 function gamepart() {
 	count++;
 	if (count == 10) {
-		end = Date();
-		time = (Number(Date.parse(end)) - Number(Date.parse(start)))/1000;
-		time2 = (Number(Date.parse(end)) - Number(Date.parse(start)))%1000;
-		$("#result").html("<p>Congratulation!<br>You finished the game in "+time+"."+time2+" seconds</p>");
+		end = window.performance.now();
+		time = (end - start)/1000;
+		time = time.toFixed(2);
+		$("#result").html("<p>Congratulation!<br>You finished the game in "+time+" seconds</p>");
 	}
 	console.log(count);
 }
