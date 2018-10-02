@@ -5,6 +5,7 @@ $.each(numbers, function (i){
 	var card = "<div id='card"+numbers[i]+"'  class='card"+numbers[i]+"'><p>"+numbers[i]+"</p></div>"
 	$("#your_cards").append(card);
 });
+//-----create fields-----//
 var fields = ["one","two","three","four","five","six","seven","eight","nine","ten"]
 $.each(fields, function (i) {
 	var j = i + 1;
@@ -23,9 +24,9 @@ $( function() {
 //-----function to change the colors when the cards are dropping-----//
 function changecard(x) {
 	x = x.substr(4,2);
-	console.log(x);
 	$(".card"+x).addClass("dropped"+x);
 	$(".drop"+x).addClass("dropped"+x);
+	gamepart();
 }
 
 
@@ -39,3 +40,20 @@ function shuffleArray(d) {
   }
   return d
 };
+
+//-----time for a game-----//
+var start = Date();
+var end = 0;
+var time = 0;
+var count = 0;
+
+function gamepart() {
+	count++;
+	if (count == 10) {
+		end = Date();
+		time = (Number(Date.parse(end)) - Number(Date.parse(start)))/1000;
+		time2 = (Number(Date.parse(end)) - Number(Date.parse(start)))%1000;
+		$("#result").html("<p>Congratulation!<br>You finished the game in "+time+"."+time2+" seconds</p>");
+	}
+	console.log(count);
+}
