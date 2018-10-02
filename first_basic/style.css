@@ -1,0 +1,20 @@
+#imagecontainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+img {
+	max-width: 300px;
+	height: auto;
+}
+
+#message {
+	border: 2px black solid;
+	width: 800px;
+	height: 100px;
+	margin: 0 auto;
+	font-size: 30px;
+	text-align: center;
+
+}
