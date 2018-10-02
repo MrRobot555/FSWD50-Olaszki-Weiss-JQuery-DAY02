@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DAY02 Basic 2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style>
+		main {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		main div {
+			width: 30%;
+		}
+		main > div > img {
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div><img src="img/1.png" alt=""></div>
+		<div><img src="img/2.png" class="snow" alt=""></div>
+		<div><img src="img/1.png" alt=""></div>
+		<div><img src="img/1.png" alt=""></div>
+		<div><img src="img/2.png" class="snow" alt=""></div>
+		<div><img src="img/1.png" alt=""></div>
+		<div><img src="img/2.png" class="snow" alt=""></div>
+		<div><img src="img/1.png" alt=""></div>
+		<div><img src="img/2.png" class="snow" alt=""></div>	
+	</main>
+
+<script>
+	$(".snow").click(function(){
+		$(this).slideToggle(1000);
+	});
+</script>
+
+</body>
+</html>
